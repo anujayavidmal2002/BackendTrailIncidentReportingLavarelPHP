@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'asgardeo' => [
+        'base_url' => env('ASGARDEO_BASE_URL', 'https://api.asgardeo.io/t/choreolabs'),
+        'access_token' => env('ASGARDEO_ACCESS_TOKEN'),
+    ],
+
 ];

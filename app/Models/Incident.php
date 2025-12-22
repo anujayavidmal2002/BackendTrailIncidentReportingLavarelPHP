@@ -28,6 +28,7 @@ class Incident extends Model
         'photos',
         'photoUrl',
         'photoKey',
+        'reportedBy',
     ];
 
     protected $casts = [

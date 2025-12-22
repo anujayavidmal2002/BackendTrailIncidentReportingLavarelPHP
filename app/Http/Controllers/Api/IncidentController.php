@@ -37,6 +37,7 @@ class IncidentController extends Controller
             'locationMode' => 'nullable|string',
             'date' => 'nullable|string',
             'time' => 'nullable|string',
+            'reportedBy' => 'nullable|string|max:255',
             'photos' => 'nullable|array|max:5',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif|max:5120',
         ]);
@@ -66,6 +67,7 @@ class IncidentController extends Controller
             'locationText' => $validated['locationText'] ?? null,
             'date' => $validated['date'] ?? now()->toDateString(),
             'time' => $validated['time'] ?? now()->format('H:i:s'),
+            'reportedBy' => $validated['reportedBy'] ?? null,
             'photos' => $photos,
             'photoUrl' => $photos[0]['url'] ?? null,
             'photoKey' => $photos[0]['key'] ?? null,
